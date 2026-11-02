@@ -1,0 +1,476 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Oct 27, 2026, 10:34:14 PM
+    Author     : Debby Arreaga
+*/
+
+/* ============================================
+   Página de resultado + diploma
+   ============================================ */
+
+.resultado-main {
+    background: var(--gris-claro);
+    padding: 40px 0;
+    min-height: calc(100vh - 250px);
+}
+
+.resultado-contenedor {
+    max-width: 900px;
+}
+
+/* ============================================
+   ENCABEZADO CON NOTA
+   ============================================ */
+.resultado-header {
+    background: var(--blanco);
+    padding: 45px 35px;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    text-align: center;
+    margin-bottom: 25px;
+    border-top: 6px solid var(--verde);
+}
+
+.resultado-header.aprobado { border-top-color: var(--verde); }
+.resultado-header.reprobado { border-top-color: #E53935; }
+
+.resultado-header__icono {
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+}
+
+.resultado-header__titulo {
+    font-family: var(--fuente-titulo);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.resultado-header.aprobado .resultado-header__titulo { color: var(--verde); }
+.resultado-header.reprobado .resultado-header__titulo { color: #E53935; }
+
+.resultado-header__subtitulo {
+    color: var(--texto-suave);
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+}
+
+.resultado-header__nota-caja {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 50px;
+    background: var(--gris-claro);
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.resultado-header__nota {
+    font-family: var(--fuente-titulo);
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.resultado-header.aprobado .resultado-header__nota { color: var(--naranja); }
+.resultado-header.reprobado .resultado-header__nota { color: #E53935; }
+
+.resultado-header__nota-label {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+    font-weight: 600;
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.resultado-header__info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    color: var(--texto-suave);
+    padding-top: 20px;
+    border-top: 1px dashed var(--gris-medio);
+}
+
+.resultado-header__info strong {
+    color: var(--texto);
+}
+
+/* ============================================
+   DETALLE DE RESPUESTAS
+   ============================================ */
+.detalle-card {
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    margin-bottom: 25px;
+}
+
+.detalle-card h2 {
+    font-family: var(--fuente-titulo);
+    color: var(--verde);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--gris-medio);
+}
+
+.detalle-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--gris-medio);
+}
+
+.detalle-item:last-child { border-bottom: none; }
+
+.detalle-item__icono {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    width: 32px;
+    text-align: center;
+}
+
+.detalle-item__contenido {
+    flex: 1;
+}
+
+.detalle-item__pregunta {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--texto);
+    margin-bottom: 4px;
+}
+
+.detalle-item__respuesta {
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+}
+
+.detalle-item__estado {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 50px;
+    flex-shrink: 0;
+}
+
+.detalle-item.correcta .detalle-item__estado {
+    background: #E8F5E9;
+    color: var(--verde);
+}
+
+.detalle-item.incorrecta .detalle-item__estado {
+    background: #FFEBEE;
+    color: #E53935;
+}
+
+/* ============================================
+   ACCIONES
+   ============================================ */
+.resultado-acciones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    padding: 25px;
+    background: var(--blanco);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.btn--outline {
+    background: transparent;
+    color: var(--verde);
+    border: 2px solid var(--verde);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-family: var(--fuente-titulo);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn--outline:hover {
+    background: var(--verde);
+    color: var(--blanco);
+}
+
+.btn--secundario-imprimir {
+    background: var(--naranja);
+    color: var(--blanco);
+    border: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-family: var(--fuente-titulo);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn--secundario-imprimir:hover {
+    background: var(--naranja-oscuro);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-hover);
+}
+
+/* ============================================
+   DIPLOMA
+   ============================================ */
+.diploma {
+    background: var(--blanco);
+    padding: 20px;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-hover);
+    margin-top: 20px;
+}
+
+.diploma__marco {
+    border: 8px double var(--verde);
+    padding: 50px 40px 40px;
+    text-align: center;
+    position: relative;
+    background:
+        radial-gradient(circle at top left, rgba(255,138,61,0.06), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(46,125,50,0.06), transparent 40%),
+        #FFFDF7;
+}
+
+.diploma__esquinas {
+    position: absolute;
+    inset: 15px;
+    pointer-events: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    font-size: 1.5rem;
+    opacity: 0.5;
+}
+
+.diploma__logo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--verde);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.diploma__pre {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--naranja-oscuro);
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.diploma__otorgado {
+    font-size: 1rem;
+    color: var(--texto-suave);
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.diploma__nombre {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--verde-oscuro);
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--naranja);
+    display: inline-block;
+    min-width: 60%;
+}
+
+.diploma__texto {
+    font-size: 1rem;
+    color: var(--texto-suave);
+    margin-bottom: 10px;
+}
+
+.diploma__curso {
+    font-family: var(--fuente-titulo);
+    font-size: 1.4rem;
+    color: var(--verde);
+    margin-bottom: 15px;
+}
+
+.diploma__nota {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--naranja);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.diploma__firmas {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.diploma__firma {
+    text-align: center;
+    min-width: 200px;
+}
+
+.diploma__firma-linea {
+    height: 2px;
+    background: var(--texto);
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.diploma__firma-nombre {
+    font-family: var(--fuente-titulo);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--texto);
+    margin-bottom: 2px;
+}
+
+.diploma__firma-cargo {
+    font-size: 0.8rem;
+    color: var(--texto-suave);
+}
+
+.diploma__pie {
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--gris-medio);
+}
+
+.diploma__id {
+    margin-top: 5px;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 700px) {
+    .resultado-header {
+        padding: 30px 20px;
+    }
+
+    .resultado-header__nota {
+        font-size: 3.5rem;
+    }
+
+    .resultado-header__nota-caja {
+        padding: 20px 35px;
+    }
+
+    .diploma__marco {
+        padding: 35px 20px 25px;
+    }
+
+    .diploma__nombre {
+        font-size: 2rem;
+        min-width: 90%;
+    }
+
+    .diploma__pre {
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+    }
+
+    .diploma__curso {
+        font-size: 1.1rem;
+    }
+
+    .diploma__nota {
+        font-size: 2.5rem;
+    }
+
+    .diploma__firmas {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .detalle-card {
+        padding: 20px;
+    }
+
+    .resultado-acciones {
+        flex-direction: column;
+    }
+
+    .resultado-acciones .btn,
+    .resultado-acciones button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ============================================
+   ESTILOS DE IMPRESIÓN (🖨️ clave del diploma)
+   ============================================ */
+@media print {
+    /* Ocultar todo excepto el diploma */
+    body * {
+        visibility: hidden;
+    }
+
+    .diploma,
+    .diploma * {
+        visibility: visible;
+    }
+
+    .diploma {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .diploma__marco {
+        border-width: 6px;
+        min-height: 95vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        page-break-inside: avoid;
+    }
+
+    /* Elementos que NO se imprimen */
+    .no-print,
+    header,
+    footer,
+    .resultado-header,
+    .detalle-card,
+    .resultado-acciones {
+        display: none !important;
+    }
+
+    @page {
+        size: A4 landscape;
+        margin: 0.5cm;
+    }
+}

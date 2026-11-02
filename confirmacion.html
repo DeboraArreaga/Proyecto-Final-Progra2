@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación | PetAcademy Guatemala 🐾</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cssindex.css">
+    <link rel="stylesheet" href="cssconfirmacion.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="contenedor header__contenido">
+            <a href="index.html" class="logo">
+                <span class="logo__icono">🐾</span>
+                <span class="logo__texto">Pet<strong>Academy</strong></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#curso">Curso</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="confirmacion-main">
+        <div class="contenedor">
+            <div class="confirmacion-card" id="confirmacionCard">
+                <div class="confirmacion-card__icono">✅</div>
+                <h1>¡Registro exitoso!</h1>
+                <p class="confirmacion-card__sub">Gracias por inscribirte. Revisa que tus datos sean correctos:</p>
+
+                <div class="datos-grid" id="datosGrid">
+                    <!-- Los datos se cargan con JS -->
+                </div>
+
+                <div class="confirmacion-acciones">
+                    <a href="curso.html" class="btn btn--primario btn--grande" id="btnCurso">
+                        Acceder al curso 🐾
+                    </a>
+                    <a href="registro.html" class="btn btn--outline" id="btnEditar">
+                        Editar datos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__copy">
+            <p>© 2026 PetAcademy Guatemala. Proyecto académico.</p>
+        </div>
+    </footer>
+
+    <script src="jsconfirmacion.js"></script>
+</body>
+</html>

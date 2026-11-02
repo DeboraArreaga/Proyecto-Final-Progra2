@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | PetAcademy Guatemala 🐾</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cssindex.css">
+    <link rel="stylesheet" href="cssregistro.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="contenedor header__contenido">
+            <a href="index.html" class="logo">
+                <span class="logo__icono">🐾</span>
+                <span class="logo__texto">Pet<strong>Academy</strong></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#curso">Curso</a>
+                <a href="index.html#animales">Animales</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="registro-main">
+        <div class="contenedor registro-contenedor">
+
+            <!-- Panel informativo -->
+            <div class="registro-info">
+                <h1>¡Inscríbete al curso! 🐾</h1>
+                <p>Completa tus datos para acceder al <strong>Curso de Cuidado Básico de Mascotas y Tipos de Animales</strong>.</p>
+                <ul class="registro-info__lista">
+                    <li>✅ 100% en línea y gratuito</li>
+                    <li>✅ 6 módulos con imágenes y videos</li>
+                    <li>✅ Evaluación final con calificación</li>
+                    <li>✅ Diploma digital imprimible</li>
+                </ul>
+                <div class="registro-info__aviso">
+                    💡 <strong>Importante:</strong> Tus datos se guardan en tu navegador (localStorage).
+                </div>
+            </div>
+
+            <!-- Formulario -->
+            <div class="registro-form-card">
+                <h2>Formulario de inscripción</h2>
+                <p class="registro-form-card__sub">Los campos con <strong>*</strong> son obligatorios</p>
+
+                <form id="formRegistro" novalidate>
+                    <div class="form-grid">
+
+                        <div class="campo campo--full">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej: María López" autocomplete="name">
+                            <span class="error" id="error-nombre"></span>
+                        </div>
+
+                        <div class="campo">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email">
+                            <span class="error" id="error-email"></span>
+                        </div>
+
+                        <div class="campo">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="5555-5555" autocomplete="tel">
+                            <span class="error" id="error-telefono"></span>
+                        </div>
+
+                        <div class="campo">
+                            <label for="edad">Edad *</label>
+                            <input type="number" id="edad" name="edad" placeholder="Ej: 22" min="5" max="100">
+                            <span class="error" id="error-edad"></span>
+                        </div>
+
+                        <div class="campo">
+                            <label for="dpi">DPI (opcional)</label>
+                            <input type="text" id="dpi" name="dpi" placeholder="13 dígitos" maxlength="13">
+                            <span class="error" id="error-dpi"></span>
+                        </div>
+
+                        <div class="campo campo--full">
+                            <label for="direccion">Dirección *</label>
+                            <input type="text" id="direccion" name="direccion" placeholder="Ej: Zona 10, Ciudad de Guatemala">
+                            <span class="error" id="error-direccion"></span>
+                        </div>
+
+                        <div class="campo">
+                            <label>Género *</label>
+                            <div class="radio-group">
+                                <label class="radio-opcion"><input type="radio" name="genero" value="Masculino"> Masculino</label>
+                                <label class="radio-opcion"><input type="radio" name="genero" value="Femenino"> Femenino</label>
+                                <label class="radio-opcion"><input type="radio" name="genero" value="Otro"> Otro</label>
+                            </div>
+                            <span class="error" id="error-genero"></span>
+                        </div>
+
+                        <div class="campo">
+                            <label for="mascota">Mascota que tienes *</label>
+                            <select id="mascota" name="mascota">
+                                <option value="">-- Selecciona --</option>
+                                <option value="Perro">🐶 Perro</option>
+                                <option value="Gato">🐱 Gato</option>
+                                <option value="Ave">🦜 Ave</option>
+                                <option value="Pez">🐠 Pez</option>
+                                <option value="Roedor">🐹 Roedor</option>
+                                <option value="Otro">Otro</option>
+                                <option value="Ninguna aún">Ninguna aún</option>
+                            </select>
+                            <span class="error" id="error-mascota"></span>
+                        </div>
+
+                        <div class="campo campo--full">
+                            <label class="checkbox-opcion">
+                                <input type="checkbox" id="terminos" name="terminos">
+                                Acepto los <a href="#">términos y condiciones</a> y el uso de mis datos para fines académicos. *
+                            </label>
+                            <span class="error" id="error-terminos"></span>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="btn btn--primario btn--bloque btn--grande">
+                        Registrarme y comenzar 🐾
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__copy">
+            <p>© 2026 PetAcademy Guatemala. Proyecto académico.</p>
+        </div>
+    </footer>
+
+    <script src="jsregistro.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Oct 27, 2026, 10:16:46 PM
+    Author     : Debby Arreaga
+*/
+
+/* Estilos de la página de confirmación de registro */
+
+.confirmacion-main {
+    background: var(--gris-claro);
+    padding: 60px 0;
+    min-height: calc(100vh - 250px);
+}
+
+.confirmacion-card {
+    background: var(--blanco);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+
+.confirmacion-card__icono {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.confirmacion-card h1 {
+    font-family: var(--fuente-titulo);
+    color: var(--verde);
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.confirmacion-card__sub {
+    color: var(--texto-suave);
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+/* Grid de datos */
+.datos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    text-align: left;
+    margin-bottom: 35px;
+}
+
+.dato {
+    background: var(--gris-claro);
+    padding: 14px 18px;
+    border-radius: 10px;
+    border-left: 4px solid var(--naranja);
+}
+
+.dato__label {
+    display: block;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--texto-suave);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.dato__valor {
+    display: block;
+    font-size: 1rem;
+    color: var(--texto);
+    font-weight: 600;
+    word-break: break-word;
+}
+
+/* Acciones */
+.confirmacion-acciones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Botón outline (para "Editar datos") */
+.btn--outline {
+    background: transparent;
+    color: var(--verde);
+    border: 2px solid var(--verde);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-family: var(--fuente-titulo);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn--outline:hover {
+    background: var(--verde);
+    color: var(--blanco);
+}
+
+/* Estado de error (si no hay registro) */
+.confirmacion-card--error h1 {
+    color: #E53935;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .datos-grid { grid-template-columns: 1fr; }
+    .confirmacion-card { padding: 35px 22px; }
+    .confirmacion-card h1 { font-size: 1.6rem; }
+}

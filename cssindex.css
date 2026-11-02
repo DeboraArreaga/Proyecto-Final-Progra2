@@ -1,0 +1,568 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Oct 25, 2026, 10:32:38 PM
+    Author     : Debby Arreaga
+*/
+
+/* ============================================
+   VARIABLES GLOBALES
+   ============================================ */
+:root {
+    --verde: #2E7D32;
+    --verde-oscuro: #1B5E20;
+    --naranja: #FF8A3D;
+    --naranja-oscuro: #E56B1F;
+    --blanco: #FFFFFF;
+    --gris-claro: #F5F5F5;
+    --gris-medio: #E0E0E0;
+    --texto: #333333;
+    --texto-suave: #666666;
+
+    --fuente-titulo: 'Poppins', sans-serif;
+    --fuente-cuerpo: 'Open Sans', sans-serif;
+
+    --radio: 12px;
+    --sombra: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --sombra-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   RESET BÁSICO
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    color: var(--texto);
+    line-height: 1.6;
+    background: var(--blanco);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ============================================
+   CONTENEDOR
+   ============================================ */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-family: var(--fuente-titulo);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn--primario {
+    background: var(--naranja);
+    color: var(--blanco);
+}
+
+.btn--primario:hover {
+    background: var(--naranja-oscuro);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-hover);
+}
+
+.btn--secundario {
+    background: transparent;
+    color: var(--blanco);
+    border: 2px solid var(--blanco);
+}
+
+.btn--secundario:hover {
+    background: var(--blanco);
+    color: var(--verde);
+}
+
+.btn--bloque {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn--grande {
+    padding: 16px 40px;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.header {
+    background: var(--blanco);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--fuente-titulo);
+    font-size: 1.5rem;
+    color: var(--verde);
+}
+
+.logo__icono {
+    font-size: 1.8rem;
+}
+
+.logo__texto strong {
+    color: var(--naranja);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav a {
+    font-weight: 600;
+    color: var(--texto);
+    transition: color 0.2s;
+}
+
+.nav a:hover {
+    color: var(--verde);
+}
+
+.nav .btn {
+    color: var(--blanco);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+    background: linear-gradient(135deg, var(--verde) 0%, var(--verde-oscuro) 100%);
+    color: var(--blanco);
+    padding: 70px 0;
+}
+
+.hero__contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero__texto h1 {
+    font-family: var(--fuente-titulo);
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero__texto p {
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+    opacity: 0.95;
+}
+
+.hero__botones {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.hero__beneficios {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+}
+
+.hero__imagen img {
+    border-radius: 20px;
+    box-shadow: var(--sombra-hover);
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* ============================================
+   SECCIONES GENERALES
+   ============================================ */
+.seccion {
+    padding: 80px 0;
+}
+
+.seccion--gris {
+    background: var(--gris-claro);
+}
+
+.titulo-seccion {
+    font-family: var(--fuente-titulo);
+    font-size: 2.2rem;
+    color: var(--verde);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitulo-seccion {
+    text-align: center;
+    color: var(--texto-suave);
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+/* ============================================
+   TARJETAS INFO (Misión/Visión/Valores)
+   ============================================ */
+.tarjetas-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.tarjeta-info {
+    background: var(--blanco);
+    padding: 35px 25px;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    text-align: center;
+    transition: transform 0.3s;
+    border-top: 4px solid var(--naranja);
+}
+
+.tarjeta-info:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover);
+}
+
+.tarjeta-info__icono {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.tarjeta-info h3 {
+    font-family: var(--fuente-titulo);
+    color: var(--verde);
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+/* ============================================
+   CURSO
+   ============================================ */
+.curso-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.curso-card {
+    background: var(--blanco);
+    border-radius: var(--radio);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    position: relative;
+}
+
+.curso-card__badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--naranja);
+    color: var(--blanco);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.curso-card__imagen {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.curso-card__cuerpo {
+    padding: 30px;
+}
+
+.curso-card__cuerpo h3 {
+    font-family: var(--fuente-titulo);
+    color: var(--verde);
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.curso-card__datos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.curso-contenido {
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.curso-contenido h3 {
+    font-family: var(--fuente-titulo);
+    color: var(--verde);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.modulos-lista {
+    list-style: none;
+    counter-reset: modulo;
+}
+
+.modulos-lista li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gris-medio);
+}
+
+.modulos-lista li:last-child {
+    border-bottom: none;
+}
+
+.curso-contenido__nota {
+    margin-top: 20px;
+    padding: 15px;
+    background: #FFF3E0;
+    border-left: 4px solid var(--naranja);
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   ANIMALES
+   ============================================ */
+.animales-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.animal-card {
+    background: var(--blanco);
+    border-radius: var(--radio);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s;
+}
+
+.animal-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-hover);
+}
+
+.animal-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.animal-card__texto {
+    padding: 20px;
+}
+
+.animal-card__texto h3 {
+    font-family: var(--fuente-titulo);
+    color: var(--verde);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.animal-card__texto p {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+    margin-bottom: 8px;
+}
+
+.animal-card__ejemplos {
+    font-size: 0.85rem !important;
+    color: var(--texto) !important;
+    padding-top: 8px;
+    border-top: 1px dashed var(--gris-medio);
+}
+
+/* ============================================
+   CTA FINAL
+   ============================================ */
+.cta {
+    background: linear-gradient(135deg, var(--naranja) 0%, var(--naranja-oscuro) 100%);
+    color: var(--blanco);
+    padding: 70px 0;
+    text-align: center;
+}
+
+.cta h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+}
+
+.cta .btn--primario {
+    background: var(--blanco);
+    color: var(--naranja-oscuro);
+}
+
+.cta .btn--primario:hover {
+    background: var(--verde);
+    color: var(--blanco);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+    padding: 50px 0 20px;
+}
+
+.footer__contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 30px;
+}
+
+.footer__col h4 {
+    font-family: var(--fuente-titulo);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.footer__col ul li {
+    margin-bottom: 8px;
+}
+
+.footer__col a {
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+.footer__col a:hover {
+    opacity: 1;
+    color: var(--naranja);
+}
+
+.footer__col p {
+    margin-bottom: 8px;
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+.footer__copy {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ============================================
+   RESPONSIVE (Móvil)
+   ============================================ */
+@media (max-width: 900px) {
+    .hero__contenido,
+    .curso-grid,
+    .footer__contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .hero__texto h1 {
+        font-size: 2.2rem;
+    }
+
+    .tarjetas-info,
+    .animales-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+
+    .nav a:not(.btn) {
+        display: none; /* Ocultamos enlaces en móvil */
+    }
+}
+
+@media (max-width: 600px) {
+    .tarjetas-info,
+    .animales-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero__texto h1 {
+        font-size: 1.8rem;
+    }
+
+    .titulo-seccion {
+        font-size: 1.7rem;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .seccion {
+        padding: 50px 0;
+    }
+}
+

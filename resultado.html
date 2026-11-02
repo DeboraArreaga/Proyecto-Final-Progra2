@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado | PetAcademy Guatemala 🐾</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cssindex.css">
+    <link rel="stylesheet" href="cssresultado.css">
+</head>
+<body>
+
+    <header class="header no-print">
+        <div class="contenedor header__contenido">
+            <a href="index.html" class="logo">
+                <span class="logo__icono">🐾</span>
+                <span class="logo__texto">Pet<strong>Academy</strong></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="curso.html">Curso</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="resultado-main">
+        <div class="contenedor resultado-contenedor" id="resultadoContenedor">
+
+            <!-- Encabezado con nota -->
+            <div class="resultado-header" id="resultadoHeader">
+                <!-- Se llena con JS -->
+            </div>
+
+            <!-- Detalle de respuestas -->
+            <div class="detalle-card no-print" id="detalleCard">
+                <h2>📋 Detalle de tu evaluación</h2>
+                <div id="detalleLista"></div>
+            </div>
+
+            <!-- Acciones -->
+            <div class="resultado-acciones no-print">
+                <a href="curso.html" class="btn btn--outline">← Volver al curso</a>
+                <button class="btn btn--secundario-imprimir" id="btnImprimir">
+                    🖨️ Imprimir / Guardar PDF
+                </button>
+                <a href="evaluacion.html" class="btn btn--primario" id="btnReintentar">
+                    🔄 Intentar de nuevo
+                </a>
+            </div>
+
+            <!-- ============================================
+                 DIPLOMA (visible al imprimir)
+                 ============================================ -->
+            <div class="diploma" id="diploma">
+                <div class="diploma__marco">
+                    <div class="diploma__esquinas">
+                        <span>🐾</span><span>🐾</span>
+                        <span>🐾</span><span>🐾</span>
+                    </div>
+
+                    <div class="diploma__logo">🐾 PetAcademy Guatemala</div>
+
+                    <p class="diploma__pre">DIPLOMA DE APROBACIÓN</p>
+
+                    <p class="diploma__otorgado">Se otorga el presente diploma a:</p>
+
+                    <h1 class="diploma__nombre" id="diplomaNombre">Nombre del Estudiante</h1>
+
+                    <p class="diploma__texto">
+                        Por haber completado satisfactoriamente el curso de
+                    </p>
+
+                    <h2 class="diploma__curso" id="diplomaCurso">
+                        Cuidado Básico de Mascotas y Tipos de Animales
+                    </h2>
+
+                    <p class="diploma__texto">
+                        obteniendo una calificación final de
+                    </p>
+
+                    <div class="diploma__nota" id="diplomaNota">100</div>
+
+                    <p class="diploma__texto">puntos sobre 100.</p>
+
+                    <div class="diploma__firmas">
+                        <div class="diploma__firma">
+                            <div class="diploma__firma-linea"></div>
+                            <p class="diploma__firma-nombre">Dra. Sofia Estrada</p>
+                            <p class="diploma__firma-cargo">Directora Académica</p>
+                        </div>
+                        <div class="diploma__firma">
+                            <div class="diploma__firma-linea"></div>
+                            <p class="diploma__firma-nombre">Dr. Jorge Orellana</p>
+                            <p class="diploma__firma-cargo">Coordinador de Veterinaria</p>
+                        </div>
+                    </div>
+
+                    <div class="diploma__pie">
+                        <p>Guatemala, <span id="diplomaFecha">25 de octubre de 2026</span></p>
+                        <p class="diploma__id">ID del diploma: <strong id="diplomaID">RES-2026-001</strong></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer no-print">
+        <div class="footer__copy">
+            <p>© 2026 PetAcademy Guatemala. Proyecto académico.</p>
+        </div>
+    </footer>
+
+    <script src="jsresultado.js"></script>
+</body>
+</html>

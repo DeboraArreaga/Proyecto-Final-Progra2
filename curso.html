@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso | PetAcademy Guatemala 🐾</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cssindex.css">
+    <link rel="stylesheet" href="csscurso.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="contenedor header__contenido">
+            <a href="index.html" class="logo">
+                <span class="logo__icono">🐾</span>
+                <span class="logo__texto">Pet<strong>Academy</strong></span>
+            </a>
+            <div class="curso-header-derecha">
+                <span class="bienvenida">👋 Hola, <strong id="nombreEstudiante">...</strong></span>
+                <a href="index.html" class="btn btn--outline btn--chico">Salir</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="curso-main">
+        <div class="contenedor curso-layout">
+
+            <!-- ============ SIDEBAR ============ -->
+            <aside class="curso-sidebar">
+                <h2 class="curso-sidebar__titulo">Contenido del curso</h2>
+
+                <!-- Barra de progreso -->
+                <div class="progreso">
+                    <div class="progreso__barra">
+                        <div class="progreso__relleno" id="progresoRelleno"></div>
+                    </div>
+                    <span class="progreso__texto" id="progresoTexto">0 / 6 módulos</span>
+                </div>
+
+                <!-- Lista de módulos -->
+                <ul class="modulos-nav">
+                    <li>
+                        <button class="modulo-btn activo" data-modulo="1">
+                            <span class="modulo-btn__num">1</span>
+                            Introducción al mundo animal 🐾
+                        </button>
+                    </li>
+                    <li>
+                        <button class="modulo-btn" data-modulo="2">
+                            <span class="modulo-btn__num">2</span>
+                            Alimentación adecuada 🍖
+                        </button>
+                    </li>
+                    <li>
+                        <button class="modulo-btn" data-modulo="3">
+                            <span class="modulo-btn__num">3</span>
+                            Higiene y aseo 🛁
+                        </button>
+                    </li>
+                    <li>
+                        <button class="modulo-btn" data-modulo="4">
+                            <span class="modulo-btn__num">4</span>
+                            Salud y veterinario 🩺
+                        </button>
+                    </li>
+                    <li>
+                        <button class="modulo-btn" data-modulo="5">
+                            <span class="modulo-btn__num">5</span>
+                            Ejercicio y bienestar 🎾
+                        </button>
+                    </li>
+                    <li>
+                        <button class="modulo-btn" data-modulo="6">
+                            <span class="modulo-btn__num">6</span>
+                            Evaluación final ✅
+                        </button>
+                    </li>
+                </ul>
+
+                <a href="evaluacion.html" id="btnEvaluacion" class="btn btn--primario btn--bloque">
+                    Ir a la evaluación 🎓
+                </a>
+            </aside>
+
+            <!-- ============ CONTENIDO ============ -->
+            <section class="curso-contenido">
+
+                <!-- ========== MÓDULO 1 ========== -->
+                <article class="modulo-contenido activo" id="modulo-1">
+                    <span class="modulo-chip">Módulo 1</span>
+                    <h1>Introducción al mundo animal 🐾</h1>
+                    <p class="modulo-intro">Conozcamos las distintas categorías de animales que existen y su relación con el ser humano.</p>
+
+                    <img src="imagenes/perroygato.jpg" alt="Perro y gato" class="modulo-imagen">
+
+                    <h3>¿Qué es una mascota?</h3>
+                    <p>Una mascota es un animal doméstico que convive con el ser humano como compañero, recibiendo cuidados y afecto. No todos los animales son mascotas: existen animales <strong>de granja</strong> (criados para producción) y <strong>silvestres</strong> (que viven en libertad en su hábitat natural).</p>
+
+                    <h3>Tipos de animales</h3>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>🐶 Domésticos</h4>
+                            <p>Convivien con el humano en el hogar. <strong>Ejemplos:</strong> perro, gato, hámster, conejo, loro, periquito.</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>🐄 De granja</h4>
+                            <p>Se crían para producción o trabajo. <strong>Ejemplos:</strong> vaca, cerdo, gallina, caballo, oveja, cabra.</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>🦁 Silvestres</h4>
+                            <p>Viven libres en su hábitat. <strong>Ejemplos:</strong> león, tucán, tortuga marina, jaguar.</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>🐠 Acuáticos</h4>
+                            <p>Viven total o parcialmente en el agua. <strong>Ejemplos:</strong> peces, ajolote, manatí, tortuga marina.</p>
+                        </div>
+                    </div>
+
+                    <h3>🇬🇹 Animales emblemáticos de Guatemala</h3>
+                    <ul class="lista-iconos">
+                        <li>🦜 <strong>Quetzal:</strong> ave nacional de Guatemala, símbolo de libertad.</li>
+                        <li>🐆 <strong>Jaguar:</strong> el felino más grande de América, presente en Petén.</li>
+                        <li>🐋 <strong>Manatí:</strong> mamífero marino en peligro de extinción en Izabal.</li>
+                        <li>🐊 <strong>Cocodrilo americano:</strong> habita en ríos y manglares del Caribe guatemalteco.</li>
+                    </ul>
+
+                    <h3>🎥 Video: </h3>
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/JOipLXnlZZ8?si=nHOxlq8_M8oK-hrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <h3>🔗 Enlaces de interés</h3>
+                    <ul class="lista-enlaces">
+                        <li><a href="https://concepto.de/clasificacion-de-los-animales/" target="_blank">Clasificación de los animales-Enciclopedia Concepto</a></li>
+                        <li><a href="https://a-z-animals.com/animals/location/central-america/guatemala/" target="_blank">Wildlife of Guatemala</a></li>
+                    </ul>
+
+                    <div class="modulo-nav-botones">
+                        <button class="btn btn--primario" data-ir="2">Siguiente módulo →</button>
+                    </div>
+                </article>
+
+                <!-- ========== MÓDULO 2 ========== -->
+                <article class="modulo-contenido" id="modulo-2">
+                    <span class="modulo-chip">Módulo 2</span>
+                    <h1>Alimentación adecuada 🍖</h1>
+                    <p class="modulo-intro">Cada animal necesita una dieta específica. Descubre qué dar y qué evitar.</p>
+
+                    <img src="imagenes/comida.jpg" alt="Comida de mascotas" class="modulo-imagen">
+
+                    <h3>Tipos de dieta según la especie</h3>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h4>🥩 Carnívoros</h4>
+                            <p>Se alimentan principalmente de carne. <strong>Ejemplos:</strong> perro, gato, jaguar.</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>🌿 Herbívoros</h4>
+                            <p>Se alimentan de plantas. <strong>Ejemplos:</strong> conejo, caballo, vaca.</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>🍎 Omnívoros</h4>
+                            <p>Combinan carne y vegetales. <strong>Ejemplos:</strong> cerdo, gallina, hámster.</p>
+                        </div>
+                    </div>
+
+                    <h3>⛔ Alimentos prohibidos para perros y gatos</h3>
+                    <table class="tabla-curso">
+                        <thead>
+                            <tr><th>Alimento</th><th>¿Por qué es peligroso?</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>🍫 Chocolate</td><td>Contiene teobromina, tóxica para perros y gatos.</td></tr>
+                            <tr><td>🍇 Uvas y pasas</td><td>Pueden causar insuficiencia renal.</td></tr>
+                            <tr><td>🧅 Cebolla y ajo</td><td>Dañan los glóbulos rojos (anemia).</td></tr>
+                            <tr><td>🥑 Aguacate</td><td>La persina es tóxica para muchas especies.</td></tr>
+                            <tr><td>☕ Cafeína</td><td>Altera el ritmo cardíaco.</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h3>💡 Consejos prácticos</h3>
+                    <ul class="lista-iconos">
+                        <li>✅ Consulta con un veterinario la cantidad diaria de alimento.</li>
+                        <li>✅ Ofrece agua limpia y fresca siempre.</li>
+                        <li>✅ Evita dar sobras de comida humana condimentada.</li>
+                        <li>✅ Establece horarios fijos de alimentación.</li>
+                    </ul>
+
+                    <h3>🎥 Video: </h3>
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SPdWXQQk1ic?si=4kX5d2Fj5K4SaxTT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="modulo-nav-botones">
+                        <button class="btn btn--outline" data-ir="1">← Anterior</button>
+                        <button class="btn btn--primario" data-ir="3">Siguiente módulo →</button>
+                    </div>
+                </article>
+
+                <!-- ========== MÓDULO 3 ========== -->
+                <article class="modulo-contenido" id="modulo-3">
+                    <span class="modulo-chip">Módulo 3</span>
+                    <h1>Higiene y aseo 🛁</h1>
+                    <p class="modulo-intro">La limpieza es clave para la salud y el bienestar de tu mascota.</p>
+
+                    <img src="imagenes/baño.jpg" alt="Baño de perro" class="modulo-imagen">
+
+                    <h3>Frecuencia de baño según especie</h3>
+                    <table class="tabla-curso">
+                        <thead>
+                            <tr><th>Animal</th><th>Frecuencia recomendada</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>🐶 Perro (pelo corto)</td><td>Cada 4–6 semanas</td></tr>
+                            <tr><td>🐶 Perro (pelo largo)</td><td>Cada 3–4 semanas</td></tr>
+                            <tr><td>🐱 Gato</td><td>Cada 6–8 semanas (se auto-limpia)</td></tr>
+                            <tr><td>🐰 Conejo</td><td>Solo cuando esté sucio (no se bañan)</td></tr>
+                            <tr><td>🦜 Aves</td><td>Baño con atomizador 2 veces/semana</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h3>🧼 Rutina de higiene</h3>
+                    <ul class="lista-iconos">
+                        <li>🪮 <strong>Cepillado:</strong> 2–3 veces por semana, evita nudos.</li>
+                        <li>✂️ <strong>Corte de uñas:</strong> cada 3–4 semanas.</li>
+                        <li>🪥 <strong>Cepillado dental:</strong> 2–3 veces por semana.</li>
+                        <li>👂 <strong>Limpieza de oídos:</strong> cada 15 días.</li>
+                        <li>🧹 <strong>Limpieza del arenero:</strong> diaria (gatos).</li>
+                    </ul>
+
+                    <h3>🎥 Video:</h3>
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/cZkDY-DG534?si=g3cpjICB9cGbMS-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="modulo-nav-botones">
+                        <button class="btn btn--outline" data-ir="2">← Anterior</button>
+                        <button class="btn btn--primario" data-ir="4">Siguiente módulo →</button>
+                    </div>
+                </article>
+
+                <!-- ========== MÓDULO 4 ========== -->
+                <article class="modulo-contenido" id="modulo-4">
+                    <span class="modulo-chip">Módulo 4</span>
+                    <h1>Salud y visitas al veterinario 🩺</h1>
+                    <p class="modulo-intro">Previene enfermedades con vacunas y visitas regulares al veterinario.</p>
+
+                    <img src="imagenes/vat.jpg" alt="Veterinario" class="modulo-imagen">
+
+                    <h3>💉 Calendario de vacunas</h3>
+                    <table class="tabla-curso">
+                        <thead>
+                            <tr><th>Vacuna</th><th>Perros</th><th>Gatos</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Parvovirus / Panleucopenia</td><td>6–8 semanas</td><td>6–8 semanas</td></tr>
+                            <tr><td>Rabia</td><td>3 meses (refuerzo anual)</td><td>3 meses (refuerzo anual)</td></tr>
+                            <tr><td>Moquillo / Rinotraqueítis</td><td>Anual</td><td>Anual</td></tr>
+                            <tr><td>Leptospirosis</td><td>Anual</td><td>—</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h3>🚨 Signos de enfermedad</h3>
+                    <div class="info-grid">
+                        <div class="info-box info-box--alerta">
+                            <h4>⚠️ Acude al veterinario si notas:</h4>
+                            <ul>
+                                <li>Letargo o debilidad</li>
+                                <li>Falta de apetito por más de 24 h</li>
+                                <li>Vómitos o diarrea frecuentes</li>
+                                <li>Fiebre (más de 39 °C en perros)</li>
+                                <li>Dificultad para respirar</li>
+                                <li>Cambios de comportamiento bruscos</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>🐛 Desparasitación</h3>
+                    <p>Se recomienda desparasitar a perros y gatos <strong>cada 3 meses</strong> (interna) y aplicar antipulgas/garrapatas mensualmente según el producto.</p>
+
+                    <h3>🔗 Enlaces de interés</h3>
+                    <ul class="lista-enlaces">
+                        <li><a href="https://purina.com.gt/purina/perros/que-hacer-en-consulta-veterinaria target="_blank">Purina Guatemala</a></li>
+                        <li><a href="https://emancipet.org/es/blog/2022/05/what-vet-care-does-my-pet-need-at-each-stage-of-life/" target="_blank">Cuidados Veterinarios</a></li>
+                    </ul>
+
+                    <h3>🎥 Video:</h3>
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ktgEeLYdTto?si=3W6Hi-GEtsFMEFqg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="modulo-nav-botones">
+                        <button class="btn btn--outline" data-ir="3">← Anterior</button>
+                        <button class="btn btn--primario" data-ir="5">Siguiente módulo →</button>
+                    </div>
+                </article>
+
+                <!-- ========== MÓDULO 5 ========== -->
+                <article class="modulo-contenido" id="modulo-5">
+                    <span class="modulo-chip">Módulo 5</span>
+                    <h1>Ejercicio y bienestar emocional 🎾</h1>
+                    <p class="modulo-intro">Un animal ejercitado y estimulado es un animal feliz.</p>
+
+                    <img src="imagenes/ejercicio.jpeg" alt="Perro jugando" class="modulo-imagen">
+
+                    <h3>🏃 Ejercicio según la raza y especie</h3>
+                    <table class="tabla-curso">
+                        <thead>
+                            <tr><th>Animal</th><th>Ejercicio diario recomendado</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>🐕 Perro de raza activa (labrador, border collie)</td><td>1.5 – 2 horas</td></tr>
+                            <tr><td>🐕 Perro pequeño (chihuahua, pug)</td><td>30 – 45 minutos</td></tr>
+                            <tr><td>🐱 Gato</td><td>15 – 30 min de juego</td></tr>
+                            <tr><td>🐰 Conejo</td><td>2 – 3 horas suelto al día</td></tr>
+                            <tr><td>🐹 Hámster</td><td>Rueda de ejercicio en la jaula</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h3>🧸 Enriquecimiento ambiental</h3>
+                    <ul class="lista-iconos">
+                        <li>🎾 <strong>Juguetes interactivos:</strong> pelotas, cuerdas, Kong con premios.</li>
+                        <li>🪜 <strong>Espacios para trepar:</strong> torres para gatos.</li>
+                        <li>🌳 <strong>Paseos nuevos:</strong> cambia rutas para estimular el olfato.</li>
+                        <li>🧠 <strong>Juegos mentales:</strong> esconder premios, enseñar trucos.</li>
+                    </ul>
+
+                    <h3>❤️ Socialización</h3>
+                    <p>La socialización debe iniciarse a edad temprana (3–16 semanas en perros). Un animal bien socializado es menos propenso a la ansiedad y la agresividad.</p>
+
+                    <div class="galeria">
+                        <img src="imagenes/so2.jpeg" alt="Perros jugando">
+                        <img src="imagenes/so1.jpeg" alt="Perros jugando">
+                        <img src="imagenes/so3.jpeg" alt="Perros jugando">
+                    </div>
+
+                    <h3>🎥 Video:</h3>
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ajle762skLA?si=RZwS8lyvaCPzBON-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="modulo-nav-botones">
+                        <button class="btn btn--outline" data-ir="4">← Anterior</button>
+                        <button class="btn btn--primario" data-ir="6">Siguiente módulo →</button>
+                    </div>
+                </article>
+
+                <!-- ========== MÓDULO 6 ========== -->
+                <article class="modulo-contenido" id="modulo-6">
+                    <span class="modulo-chip">Módulo 6</span>
+                    <h1>Evaluación final ✅</h1>
+                    <p class="modulo-intro">¡Has llegado al final del curso! Es hora de poner a prueba lo aprendido.</p>
+
+                    <img src="imagenes/eva.jpg" alt="Evaluación" class="modulo-imagen">
+
+                    <h3>📋 Instrucciones</h3>
+                    <ul class="lista-iconos">
+                        <li>📝 La evaluación contiene <strong>6 preguntas</strong>.</li>
+                        <li>🎯 Cada pregunta vale aproximadamente <strong>16.67 puntos</strong> (total 100).</li>
+                        <li>🏆 Necesitas <strong>70 puntos o más</strong> para aprobar y obtener tu diploma.</li>
+                        <li>⏱️ No hay límite de tiempo.</li>
+                        <li>🔁 Puedes intentarlo más de una vez si no apruebas.</li>
+                    </ul>
+
+                    <div class="aviso-importante">
+                        💡 <strong>Importante:</strong> Al terminar, tus respuestas y calificación quedarán registradas en el sistema para revisión del administrador.
+                    </div>
+
+                    <div class="modulo-nav-botones modulo-nav-botones--centrados">
+                        <button class="btn btn--outline" data-ir="5">← Anterior</button>
+                        <a href="evaluacion.html" class="btn btn--primario btn--grande" id="btnIrEvaluacion">
+                            Comenzar evaluación 🎓
+                        </a>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__copy">
+            <p>© 2026 PetAcademy Guatemala. Proyecto académico.</p>
+        </div>
+    </footer>
+
+    <script src="jscurso.js"></script>
+</body>
+</html>

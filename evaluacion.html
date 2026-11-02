@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Final | PetAcademy Guatemala 🐾</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cssindex.css">
+    <link rel="stylesheet" href="cssevaluacion.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="contenedor header__contenido">
+            <a href="index.html" class="logo">
+                <span class="logo__icono">🐾</span>
+                <span class="logo__texto">Pet<strong>Academy</strong></span>
+            </a>
+            <div class="curso-header-derecha">
+                <span class="bienvenida">👋 <strong id="nombreEstudiante">...</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="evaluacion-main">
+        <div class="contenedor evaluacion-contenedor">
+
+            <!-- Encabezado -->
+            <div class="evaluacion-header">
+                <span class="evaluacion-chip">Evaluación final</span>
+                <h1>Pon a prueba lo aprendido 🎓</h1>
+                <p>Responde las siguientes <strong>6 preguntas</strong>. Necesitas <strong>70 puntos o más</strong> para aprobar y obtener tu diploma.</p>
+
+                <div class="evaluacion-progreso">
+                    <div class="evaluacion-progreso__barra">
+                        <div class="evaluacion-progreso__relleno" id="evalProgreso"></div>
+                    </div>
+                    <span class="evaluacion-progreso__texto" id="evalProgresoTexto">0 / 6 respondidas</span>
+                </div>
+            </div>
+
+            <!-- Formulario de evaluación -->
+            <form id="formEvaluacion" novalidate>
+
+                <!-- ============ PREGUNTA 1 (RADIO) ============ -->
+                <div class="pregunta" data-pregunta="1">
+                    <div class="pregunta__header">
+                        <span class="pregunta__num">1</span>
+                        <h2>¿Cada cuánto se recomienda bañar a un perro sano de pelo corto?</h2>
+                    </div>
+                    <div class="opciones">
+                        <label class="opcion">
+                            <input type="radio" name="p1" value="a">
+                            <span>Cada semana</span>
+                        </label>
+                        <label class="opcion">
+                            <input type="radio" name="p1" value="b">
+                            <span>Cada 4 a 6 semanas</span>
+                        </label>
+                        <label class="opcion">
+                            <input type="radio" name="p1" value="c">
+                            <span>Cada año</span>
+                        </label>
+                        <label class="opcion">
+                            <input type="radio" name="p1" value="d">
+                            <span>Nunca se debe bañar</span>
+                        </label>
+                    </div>
+                    <span class="error" id="error-p1"></span>
+                </div>
+
+                <!-- ============ PREGUNTA 2 (CHECKBOX) ============ -->
+                <div class="pregunta" data-pregunta="2">
+                    <div class="pregunta__header">
+                        <span class="pregunta__num">2</span>
+                        <h2>¿Cuáles de estos alimentos son tóxicos para perros? <small>(Selecciona todas las correctas)</small></h2>
+                    </div>
+                    <div class="opciones">
+                        <label class="opcion">
+                            <input type="checkbox" name="p2" value="chocolate">
+                            <span>🍫 Chocolate</span>
+                        </label>
+                        <label class="opcion">
+                            <input type="checkbox" name="p2" value="uvas">
+                            <span>🍇 Uvas y pasas</span>
+                        </label>
+                        <label class="opcion">
+                            <input type="checkbox" name="p2" value="pollo">
+                            <span>🍗 Pollo cocido sin condimentos</span>
+                        </label>
+                        <label class="opcion">
+                            <input type="checkbox" name="p2" value="cebolla">
+                            <span>🧅 Cebolla y ajo</span>
+                        </label>
+                    </div>
+                    <span class="error" id="error-p2"></span>
+                </div>
+
+                <!-- ============ PREGUNTA 3 (SELECT) ============ -->
+                <div class="pregunta" data-pregunta="3">
+                    <div class="pregunta__header">
+                        <span class="pregunta__num">3</span>
+                        <h2>¿Cuál es un animal silvestre símbolo de Guatemala?</h2>
+                    </div>
+                    <div class="opciones">
+                        <select name="p3" id="p3">
+                            <option value="">-- Selecciona una opción --</option>
+                            <option value="perro">🐶 Perro</option>
+                            <option value="quetzal">🦜 Quetzal</option>
+                            <option value="gallina">🐔 Gallina</option>
+                            <option value="vaca">🐄 Vaca</option>
+                        </select>
+                    </div>
+                    <span class="error" id="error-p3"></span>
+                </div>
+
+                <!-- ============ PREGUNTA 4 (RADIO) ============ -->
+                <div class="pregunta" data-pregunta="4">
+                    <div class="pregunta__header">
+                        <span class="pregunta__num">4</span>
+                        <h2>¿Cuánto ejercicio diario necesita un perro adulto de raza activa?</h2>
+                    </div>
+                    <div class="opciones">
+                        <label class="opcion">
+                            <input type="radio" name="p4" value="a">
+                            <span>15 minutos</span>
+                        </label>
+                        <label class="opcion">
+                            <input type="radio" name="p4" value="b">
+                            <span>30 minutos</span>
+                        </label>
+                        <label class="opcion">
+                            <input type="radio" name="p4" value="c">
+                            <span>1.5 a 2 horas</span>
+                        </label>
+                        <label class="opcion">
+                            <input type="radio" name="p4" value="d">
+                            <span>5 horas</span>
+                        </label>
+                    </div>
+                    <span class="error" id="error-p4"></span>
+                </div>
+
+                <!-- ============ PREGUNTA 5 (CHECKBOX) ============ -->
+                <div class="pregunta" data-pregunta="5">
+                    <div class="pregunta__header">
+                        <span class="pregunta__num">5</span>
+                        <h2>¿Qué señales indican que tu mascota podría estar enferma? <small>(Selecciona todas las correctas)</small></h2>
+                    </div>
+                    <div class="opciones">
+                        <label class="opcion">
+                            <input type="checkbox" name="p5" value="letargo">
+                            <span>😴 Letargo o debilidad</span>
+                        </label>
+                        <label class="opcion">
+                            <input type="checkbox" name="p5" value="come">
+                            <span>🍽️ Come con normalidad</span>
+                        </label>
+                        <label class="opcion">
+                            <input type="checkbox" name="p5" value="vomitos">
+                            <span>🤢 Vómitos frecuentes</span>
+                        </label>
+                        <label class="opcion">
+                            <input type="checkbox" name="p5" value="juega">
+                            <span>🎾 Juega y corre normal</span>
+                        </label>
+                        <label class="opcion">
+                            <input type="checkbox" name="p5" value="apetito">
+                            <span>🍽️ Falta de apetito por más de 24 h</span>
+                        </label>
+                    </div>
+                    <span class="error" id="error-p5"></span>
+                </div>
+
+                <!-- ============ PREGUNTA 6 (SELECT) ============ -->
+                <div class="pregunta" data-pregunta="6">
+                    <div class="pregunta__header">
+                        <span class="pregunta__num">6</span>
+                        <h2>¿A qué edad se recomienda la primera visita al veterinario?</h2>
+                    </div>
+                    <div class="opciones">
+                        <select name="p6" id="p6">
+                            <option value="">-- Selecciona una opción --</option>
+                            <option value="1mes">1 mes</option>
+                            <option value="2meses">2 meses</option>
+                            <option value="6meses">6 meses</option>
+                            <option value="1año">1 año</option>
+                        </select>
+                    </div>
+                    <span class="error" id="error-p6"></span>
+                </div>
+
+                <!-- Botones -->
+                <div class="evaluacion-acciones">
+                    <a href="curso.html" class="btn btn--outline">← Volver al curso</a>
+                    <button type="submit" class="btn btn--primario btn--grande">
+                        Enviar evaluación 🎓
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <!-- Modal de calificación -->
+    <div class="modal" id="modalCalificacion">
+        <div class="modal__caja">
+            <div class="modal__icono" id="modalIcono">🎉</div>
+            <h2 class="modal__titulo" id="modalTitulo">¡Aprobaste!</h2>
+            <p class="modal__subtitulo" id="modalSubtitulo">Tu calificación:</p>
+            <div class="modal__nota" id="modalNota">100</div>
+            <p class="modal__detalle" id="modalDetalle">Respondiste correctamente 6 de 6 preguntas.</p>
+            <div class="modal__botones">
+                <button class="btn btn--primario btn--grande" id="btnVerResultado">
+                    Ver mi diploma 🎓
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__copy">
+            <p>© 2026 PetAcademy Guatemala. Proyecto académico.</p>
+        </div>
+    </footer>
+
+    <script src="jsevaluacion.js"></script>
+</body>
+</html>

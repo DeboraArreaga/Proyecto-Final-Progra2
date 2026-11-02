@@ -1,0 +1,357 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Oct 27, 2026, 10:29:46 PM
+    Author     : Debby Arreaga
+*/
+
+/* ============================================
+   Página de evaluación final
+   ============================================ */
+
+.evaluacion-main {
+    background: var(--gris-claro);
+    padding: 40px 0;
+    min-height: calc(100vh - 250px);
+}
+
+.evaluacion-contenedor {
+    max-width: 900px;
+}
+
+/* Header */
+.evaluacion-header {
+    background: var(--blanco);
+    padding: 35px;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.evaluacion-chip {
+    display: inline-block;
+    padding: 5px 16px;
+    background: var(--naranja);
+    color: var(--blanco);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+.evaluacion-header h1 {
+    font-family: var(--fuente-titulo);
+    color: var(--verde);
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.evaluacion-header p {
+    color: var(--texto-suave);
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+/* Progreso */
+.evaluacion-progreso {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.evaluacion-progreso__barra {
+    height: 10px;
+    background: var(--gris-medio);
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.evaluacion-progreso__relleno {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--naranja), var(--verde));
+    border-radius: 50px;
+    transition: width 0.4s ease;
+}
+
+.evaluacion-progreso__texto {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--texto-suave);
+}
+
+/* ============================================
+   PREGUNTAS
+   ============================================ */
+.pregunta {
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    margin-bottom: 20px;
+    border-left: 5px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.pregunta.respondida {
+    border-left-color: var(--verde);
+}
+
+.pregunta.con-error {
+    border-left-color: #E53935;
+}
+
+.pregunta__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.pregunta__num {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    height: 40px;
+    background: var(--verde);
+    color: var(--blanco);
+    border-radius: 50%;
+    font-family: var(--fuente-titulo);
+    font-size: 1.1rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.pregunta__header h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.15rem;
+    color: var(--texto);
+    line-height: 1.4;
+    padding-top: 8px;
+}
+
+.pregunta__header small {
+    display: block;
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--texto-suave);
+    margin-top: 4px;
+}
+
+/* Opciones */
+.opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 55px;
+}
+
+.opcion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    background: var(--gris-claro);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+}
+
+.opcion:hover {
+    background: #E8F5E9;
+    border-color: rgba(46, 125, 50, 0.3);
+}
+
+.opcion input {
+    accent-color: var(--verde);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.opcion input:checked + span {
+    color: var(--verde);
+    font-weight: 600;
+}
+
+/* Select */
+.opciones select {
+    padding: 12px 16px;
+    border: 2px solid var(--gris-medio);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--texto);
+    background: var(--gris-claro);
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.opciones select:focus {
+    outline: none;
+    border-color: var(--verde);
+    background: var(--blanco);
+}
+
+/* Errores */
+.pregunta .error {
+    display: block;
+    padding-left: 55px;
+    margin-top: 8px;
+    color: #E53935;
+    font-size: 0.85rem;
+    font-weight: 600;
+    min-height: 16px;
+}
+
+/* Acciones finales */
+.evaluacion-acciones {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 25px;
+    background: var(--blanco);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.btn--outline {
+    background: transparent;
+    color: var(--verde);
+    border: 2px solid var(--verde);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-family: var(--fuente-titulo);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn--outline:hover {
+    background: var(--verde);
+    color: var(--blanco);
+}
+
+/* ============================================
+   MODAL DE RESULTADO
+   ============================================ */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal.activo {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.modal__caja {
+    background: var(--blanco);
+    padding: 45px 35px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+.modal__icono {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.modal__titulo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.8rem;
+    color: var(--verde);
+    margin-bottom: 8px;
+}
+
+.modal__subtitulo {
+    color: var(--texto-suave);
+    margin-bottom: 15px;
+}
+
+.modal__nota {
+    font-family: var(--fuente-titulo);
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--naranja);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.modal__detalle {
+    color: var(--texto-suave);
+    margin-bottom: 25px;
+}
+
+.modal__botones {
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .evaluacion-header {
+        padding: 25px 20px;
+    }
+
+    .evaluacion-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .pregunta {
+        padding: 22px 18px;
+    }
+
+    .pregunta__header h2 {
+        font-size: 1rem;
+    }
+
+    .opciones,
+    .pregunta .error {
+        padding-left: 0;
+    }
+
+    .evaluacion-acciones {
+        flex-direction: column;
+    }
+
+    .evaluacion-acciones .btn {
+        width: 100%;
+    }
+
+    .modal__nota {
+        font-size: 3.5rem;
+    }
+}
